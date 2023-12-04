@@ -11,6 +11,6 @@ const ProductSchema = ({
     }
 });
 
-const Product = model('Product', ProductSchema);
+const Products = model('Products', ProductSchema);
 
-module.exports = Product;
+module.exports = Products;

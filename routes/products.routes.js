@@ -2,7 +2,7 @@ const router = require('express').Router();
 const mongoose = require('mongoose');
 
 const Category = require('../models/Category.Model');
-const Product = require('../models/Product.Model');
+const Products = require('../models/Product.Model');
 
 router.get("/meats", async(req, res) => {
     try{
@@ -15,10 +15,11 @@ router.get("/meats", async(req, res) => {
 
 router.get("/fruits", async(req, res) => {
     try{
-        let allFruits = await Product.find();
+        let allFruits = await Products.find();
         console.log(res.json(allFruits));
+        console.log("Heloo World Heloo World Heloo World");
     }catch(error){
-        res.json(error)
+        res.json(error);
     }
 });
 
